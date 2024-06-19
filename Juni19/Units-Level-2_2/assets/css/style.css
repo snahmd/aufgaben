@@ -1,0 +1,22 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+h2 {
+    position: absolute;
+    background-color: rgba(195, 220, 29, 0.85);
+    text-align: center;
+    color : white;
+    padding: 1em 5em;
+    top: 30vh;
+    margin: 0 200px;
+}
+img {
+    
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+   
+}

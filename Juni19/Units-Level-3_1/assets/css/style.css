@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 14px;
+   
+}
+
+main{
+    background-image: url(../img/fernando-paredes-murillo-ox2w1FZ-Pw0-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100vh;
+    padding: 5%;
+
+}
+h1{
+    text-align: center;
+    text-shadow: 1px 1px 2px white;
+    padding: 0 15%;
+    font-size: 2rem;
+}
+article{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2%;
+    border-radius: 5rem;
+    margin: 100px 0;
+}
+p{
+    text-align: center;
+    margin: 2% 0;
+
+}
+h2{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2% 0;
+}
+
