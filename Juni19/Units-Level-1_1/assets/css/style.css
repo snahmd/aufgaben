@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.img1{
+    width: 400px;
+}
+.img2{
+    width: 50%;
+}
+.img3{
+    width: 20em;
+}
+.img4{
+    width: 40em;
+}
+.img5{
+    width: 35vw;
+}
+.img6{
+    width: 75vh;
+}
