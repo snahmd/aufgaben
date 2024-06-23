@@ -1,0 +1,59 @@
+*{
+    margin: 0%;
+   padding: 0%;
+    box-sizing: border-box;
+}
+form {
+    
+    margin: 10% 30%;
+    width: 40vw;
+    height: 37vh;
+    
+} 
+label {
+    font-size: 20px;
+    font-weight: bold;
+    text-align:start;
+} 
+span{
+    color: red;
+
+}
+input {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px;
+    
+}  
+#name {
+    
+    width: 49%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px;
+    
+
+}
+#thema{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px;
+    
+}
+#message {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0 0 0;
+    padding: 5px;
+    
+}
+.submit-button {
+    width: 100%;
+    height: 30px;
+    background-color: #0f91b1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
