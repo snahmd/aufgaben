@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Raleway", sans-serif;
+    width: 100vw;
+   
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f9f9f9a1;
+}
+a {
+    color: #666;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+a:hover{
+    color: #333
+}
+ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.8rem;
+
+}
+ul li a:hover{
+    color: #337ab7;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+li {
+    margin-right: 1rem;
+}
+
+/*  Slider Section */
+.slider-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../img/div.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 2rem;
+    position: relative;
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.slider-section a{
+    padding: 1rem 2rem;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    border: 1px solid white;
+    margin-left: 1rem;
+    width: 15%;
+}
+.slider-section a:hover{
+    background-color: white;
+    color: black;
+}
+.slider-section a:nth-child(2){
+    background-color: #cd15da;
+    border: 1px solid #cd15da;
+}
+.slider-section a:nth-child(2):hover{
+    background-color: #5f0d65;
+    border: 1px solid #5f0d65;
+}
+.slider-section__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    margin-top: 3rem;
+}
