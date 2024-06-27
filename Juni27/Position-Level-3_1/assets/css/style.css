@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-weight: 700;
+  font-style: normal;   
+}
+
+/* HEADER */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: black;
+    color: #6F6864;
+    border-bottom: 1px solid #6F6864;
+}
+
+.logo-login {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.logo-login a:hover {
+    color: #F1F1F1
+
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-right: 3rem;
+
+}
+
+li {
+    margin-right: 5rem;
+}
+li a:hover {
+    color: #F1F1F1
+}
+
+header a {
+    color: #6F6864;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+/* MAIN */
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 10rem;
+    background-color: black;
+    color: #F1F1F1;
+}
+.content-info h1{
+    width: 60%;
+    font-size: 60px;
+    font-weight: 700;
+}
+.shop-link {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+   
+}
+.shop-link div{
+    width: 2rem;
+    height: 2px;
+    background-color: #B0805D;
+}
+.shop-link a {
+    font-size: 12px;
+    
+    color: #B0805D;;
+    text-decoration: none;
+}
+
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8rem;
+    
+
+
+}
+
+.slider-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+
+}
+.slider-image img {
+    width: 200px;
+    height: 480px;
+}
+
+.direction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+}
+.direction a{
+    color: #6F6864;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid #B0805D;
+    border-radius: 120px;
+
+}
+/* .slider img {
+    width: 200px;
+    height: 480px;
+   
+}
+.slider a{
+    position: relative;
+    bottom: -18rem;
+    text-decoration: none;
+    color: #6F6864;
+    z-index: 1;
+} */
