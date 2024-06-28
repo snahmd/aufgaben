@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+}
+.cormorant-garamond-light {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-medium {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-garamond-light-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cormorant-garamond-regular-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cormorant-garamond-medium-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cormorant-garamond-semibold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cormorant-garamond-bold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* .grid { */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+  margin: 1rem;
+  grid-template-areas:
+    "eins eins eins eins eins"
+    "zwei zwei zwei zwei drei";
+  background-color: #e9e9e0;
+  height: 100vh;
+}
+
+/*! HEADER */
+
+header {
+  grid-area: eins;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  color: #333333;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+header nav {
+  width: 100vw;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+header nav ul li {
+  padding: 1rem;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333333;
+}
+
+/*! MAIN */
+
+main {
+  grid-area: zwei;
+  height: 80vh;
+}
+main h2 {
+  color: #333333;
+  text-align: center;
+  font-size: 35px;
+}
+.main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1rem;
+  height: 100%;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "eins zwei"
+    "drei vier"
+    "drei vier"
+    "funf sechs"
+    "funf sechs"
+    "funf sechs";
+  width: 80%;
+  margin-right: 1rem;
+  gap: 1rem;
+  height: auto;
+}
+.main-content div {
+}
+.main-content h3 {
+  font-size: 24px;
+}
+.main-content p {
+  font-size: 16px;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+.div1 {
+  grid-area: eins;
+}
+.div2 {
+  grid-area: zwei;
+}
+.div3 {
+  grid-area: drei;
+}
+.div4 {
+  grid-area: vier;
+}
+.div5 {
+  grid-area: funf;
+}
+.div6 {
+  grid-area: sechs;
+}
+.image-content img {
+  width: 100%;
+  height: 100%;
+}
+.image-content p {
+  padding: 1rem;
+  font-size: 16px;
+  font-style: --cormorant-garamond-regular-italic;
+  color: #333333;
+}
+
+/*! ASIDE */
+aside {
+  grid-area: drei;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+aside div {
+  padding: 1rem;
+  border: 3px solid black;
+  width: 80%;
+  height: 100%;
+  gap: 1rem;
+  text-align: center;
+}
+.adv-side h3 {
+  color: #333333;
+  font-size: 42px;
+}
+aside h3 {
+  color: #333333;
+  font-size: 24px;
+}
+aside a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #737b80;
+}

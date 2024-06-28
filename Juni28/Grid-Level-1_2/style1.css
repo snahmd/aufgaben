@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 100px 100px;
+  margin: 1rem;
+  gap: 10px;
+  grid-template-areas:
+    "eins eins eins eins"
+    "zwei zwei drei drei"
+    "zwei zwei vier fünf";
+}
+
+.grid-section div {
+  font-size: 30px;
+  border-radius: 5px;
+}
+.div1 {
+  grid-area: eins;
+  background-color: red;
+}
+.div2 {
+  grid-area: zwei;
+  background-color: blue;
+}
+.div3 {
+  grid-area: drei;
+  background-color: green;
+}
+.div4 {
+  grid-area: vier;
+  background-color: purple;
+}
+.div5 {
+  grid-area: fünf;
+  background-color: purple;
+}

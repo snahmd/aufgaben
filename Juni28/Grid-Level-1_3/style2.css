@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 15% 5% 55% 25%;
+    grid-template-rows: 12% 40% 40% 8%;
+    grid-template-areas: 
+        "header header header header"
+        "sidebar sidebar main main"
+        "sidebar sidebar main main"
+        "footer footer footer footer";
+    gap: 2px;
+}
+header {
+    grid-area: header;
+    background-color: red;
+}
+main {
+    grid-area: main;
+    background-color: blue;
+}
+aside {
+    grid-area: sidebar;
+    background-color: orange;
+}
+footer {
+    grid-area: footer;
+    background-color: green;
+}

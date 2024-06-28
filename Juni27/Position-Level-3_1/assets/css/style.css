@@ -130,6 +130,10 @@ header a {
     border-radius: 120px;
 
 }
+.direction a:hover {
+    color: #F1F1F1;
+    background-color: #B0805D;
+}
 /* .slider img {
     width: 200px;
     height: 480px;
@@ -142,3 +146,13 @@ header a {
     color: #6F6864;
     z-index: 1;
 } */
+
+/* FOOTER */
+
+footer a {
+    color:#F1F1F1;
+    position: relative;
+    bottom: 2rem;
+    left: 2rem;
+    margin-left: 1rem;
+}
