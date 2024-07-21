@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+      }
+    </style>
+    <title>Conditionals-Level-2_2</title>
+  </head>
+  <body>
+    <h1>Conditionals-Level-2_2</h1>
+    <hr />
+    <div class="section">
+      <form action="#">
+        <label class="puanlar" for="points">Luftqualität</label>
+        <input
+          type="range"
+          class="puan"
+          id="points"
+          name="points"
+          oninput="onPoint(event)"
+          min="0"
+          max="150"
+        />
+      </form>
+      <h1 class="ersteInfo"></h1>
+      <h1 class="zweiteInfo"></h1>
+    </div>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+  </body>
+</html>
