@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <script type="module" src="./main.ts" defer></script>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <section>
+      <div id="start-screen">
+        <h1>Quiz des Tages, Yeah</h1>
+        <form id="form" action="">
+          <label for="userInput">Gib deinen Namen ein:</label>
+          <input type="text" id="userInput" name="userInput" />
+          <br />
+          <label for="difficulty"
+            >Schwierigkeitsgrad und Language wählen:</label
+          >
+          <select id="difficulty">
+            <optgroup label="Deutsch">
+              <option id="leicht" value="leicht">Leicht</option>
+              <option id="schwer" value="schwer">Schwer</option>
+            </optgroup>
+            <optgroup label="English">
+              <option id="easy" value="easy">Easy</option>
+              <option id="hard" value="hard">Hard</option>
+            </optgroup>
+          </select>
+          <br />
+          <input type="submit" id="startBtn" value="Los geht's!" />
+        </form>
+      </div>
+      <div id="client-info"></div>
+      <div id="question-div">
+        <div id="answers-div"></div>
+      </div>
+    </section>
+  </body>
+</html>

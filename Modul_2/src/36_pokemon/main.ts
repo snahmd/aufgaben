@@ -1,6 +1,6 @@
 import { IPokemon } from "./contracts/IPokemon";
-import { IPokemonResult } from "./contracts/IPokemens";
-import { IPokemonType } from "./contracts/IPokemens";
+import { IPokemonResult } from "./contracts/IPokemons";
+import { IPokemonType } from "./contracts/IPokemons";
 
 const BASE_URL = "https://pokeapi.co/api/v2/pokemon?limit=50";
 const TYPE_URL = "https://pokeapi.co/api/v2/type";
