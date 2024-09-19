@@ -1,6 +1,17 @@
+import Header from "./components/Header";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 const App = () => {
   return (
-    <h1 className="bg-red-600 font-semibold p-4 text-center">HALLI HALLO</h1>
+    <section className="bg-[#23283E]">
+      <Header />
+      <Projects />
+      <Skills />
+      <Contact />
+      <Footer />
+    </section>
   );
 };
 
