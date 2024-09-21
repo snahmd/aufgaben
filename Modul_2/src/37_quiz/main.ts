@@ -14,20 +14,26 @@ const startScreen = document.getElementById("start-screen")!;
 // const clientInfoDiv = document.getElementById("client-info")!;
 const answersDiv = document.getElementById("answers-div") as HTMLDivElement;
 let questionDiv = document.getElementById("question-div") as HTMLDivElement;
+let resultDiv = document.getElementById("result") as HTMLDivElement;
+console.log("1");
 
 form.addEventListener("submit", (e) => {
+  console.log("2");
   e.preventDefault();
   fetchQuizData();
 });
+
 let questionIndex: number = 0;
 let score: number = 0;
 
 async function fetchQuizData() {
+  console.log("3");
   let difficulty = difficultySelect.value;
   const data = await fetch(
     `https://vz-wd-24-01.github.io/typescript-quiz/questions/${difficulty}.json`
   )
     .then((response) => {
+      console.log("4");
       if (!response.ok) {
         throw new Error("Netzwerkantwort war nicht ok.");
       } else {
@@ -35,41 +41,92 @@ async function fetchQuizData() {
       }
     })
     .then((data) => {
+      console.log("5");
       return data;
     });
-
-  if (questionIndex <= 19) {
-    function ekranaSoruyuVeCevaplariniBas(questionIndex: number) {
-      `
-        question-div icerisine sorunun verisini basar. 
-      `;
-      questionDiv.innerHTML = "";
-      const questionElement = document.createElement(
-        "h3"
-      ) as HTMLHeadingElement;
-      questionElement.innerText = data[questionIndex].question;
-      questionDiv.appendChild(questionElement);
-      console.log(data[questionIndex]);
-      for (let i = 0; i < 4; i++) {
-        const answerButton = document.createElement("button");
-        answerButton.innerHTML = data[questionIndex].answers[i];
-        questionDiv.appendChild(answerButton);
-        answerButton.addEventListener("click", () => {
-          if (i == data[questionIndex].correct) {
-            score++;
-          }
-          questionIndex++;
-          ekranaSoruyuVeCevaplariniBas(questionIndex);
-        });
-      }
-    }
-    ekranaSoruyuVeCevaplariniBas(questionIndex);
-  } else {
-    console.log("jhvcdshj");
+  function ll() {
+    for (let i = 0; i < 10; i++) {}
   }
+  function ekranaSoruyuVeCevaplariniBas(questionIndex: number) {
+    questionDiv.innerHTML = "";
+    const questionElement = document.createElement("h3") as HTMLHeadingElement;
+    questionElement.innerText = data[questionIndex].question;
+    questionDiv.appendChild(questionElement);
+    console.log(data[questionIndex]);
+    let tiklanildi = false;
+    let sayi: number = 30;
+    const sayiDiv = document.createElement("div");
+    sayiDiv.innerHTML = `${sayi}`;
+    const interval = setInterval(() => {
+      sayi--;
+      sayiDiv.innerHTML = `${sayi}`;
+    }, 1000);
 
-  console.log(data[questionIndex].correct);
+    setTimeout(() => {
+      if (tiklanildi) {
+        // cevap secilmis, yeni soruya gecilmis zaten.
+      } else {
+        // yeni soruya gec, 30 saniye tiklanilmamis
+        questionIndex++;
+        ekranaSoruyuVeCevaplariniBas(questionIndex);
+      }
+      // stop interval
+      clearInterval(interval);
+    }, 30000);
+    for (let i = 0; i < 4; i++) {
+      const answerButton = document.createElement("button");
+      answerButton.innerHTML = data[questionIndex].answers[i];
+      questionDiv.appendChild(answerButton);
+
+      answerButton.addEventListener("click", () => {
+        tiklanildi = true;
+        if (i == data[questionIndex].correct) {
+          score++;
+        }
+        questionIndex++;
+        if (questionIndex <= 19) {
+          ekranaSoruyuVeCevaplariniBas(questionIndex);
+        } else {
+          questionDiv.innerHTML = "";
+          resultDiv.innerHTML = `${score}`;
+        }
+
+        console.log("xxxx");
+      });
+    }
+    console.log("ekrana basma bitti");
+  }
+  ekranaSoruyuVeCevaplariniBas(questionIndex);
+
+  if (questionIndex == 19) {
+    questionDiv.innerHTML = "";
+    resultDiv.innerHTML = `${score}`;
+  }
+  console.log("10");
 }
+
+function onClick(questionIndex: number, data) {
+  questionDiv.innerHTML = "";
+  const questionElement = document.createElement("h3") as HTMLHeadingElement;
+  questionElement.innerText = data[questionIndex].question;
+  questionDiv.appendChild(questionElement);
+  for (let i = 0; i < 4; i++) {
+    const answerButton = document.createElement("button");
+    answerButton.innerHTML = data[questionIndex].answers[i];
+    questionDiv.appendChild(answerButton);
+  }
+  console.log("ekrana basma bitti");
+}
+
+function deneme() {
+  let d = 0;
+  for (let i = 0; i < d + 1; i++) {
+    return d++;
+  }
+}
+const mystring = deneme();
+
+resultDiv.innerHTML = `${mystring}`;
 
 // ....
 /// ....

@@ -4,10 +4,10 @@ const AnimalList = () => {
   return (
     <div>
       <div className="animal-list grid gap-8 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 grid-rows-3 row-end-auto mx-8 ">
-        {animals.map((animal) => (
+        {animals.map((animal, index) => (
           <div
             className="animal-item border border-white h-[700px] md:h-[650px] lg:h-[600px] flex flex-col justify-center items-center text-3xl font-bold"
-            key={animal.id}
+            key={index}
           >
             <p className="text-[100px] pb-12 mt-16">{animal.emoji}</p>
             <h3 className="text-4xl">{animal.name}</h3>
