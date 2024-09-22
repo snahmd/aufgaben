@@ -57,10 +57,12 @@ async function fetchQuizData() {
     let sayi: number = 30;
     const sayiDiv = document.createElement("div");
     sayiDiv.innerHTML = `${sayi}`;
+
     const interval = setInterval(() => {
       sayi--;
       sayiDiv.innerHTML = `${sayi}`;
     }, 1000);
+    questionDiv.appendChild(sayiDiv);
 
     setTimeout(() => {
       if (tiklanildi) {
@@ -72,6 +74,7 @@ async function fetchQuizData() {
       }
       // stop interval
       clearInterval(interval);
+      // sayiDiv.innerHTML = "";
     }, 30000);
     for (let i = 0; i < 4; i++) {
       const answerButton = document.createElement("button");
@@ -81,16 +84,24 @@ async function fetchQuizData() {
       answerButton.addEventListener("click", () => {
         tiklanildi = true;
         if (i == data[questionIndex].correct) {
-          score++;
+          answerButton.style.backgroundColor = "green";
+        } else if (i != data[questionIndex].correct) {
+          answerButton.style.backgroundColor = "red";
         }
-        questionIndex++;
-        if (questionIndex <= 19) {
-          ekranaSoruyuVeCevaplariniBas(questionIndex);
-        } else {
-          questionDiv.innerHTML = "";
-          resultDiv.innerHTML = `${score}`;
-        }
-
+        setTimeout(() => {
+          if (i == data[questionIndex].correct) {
+            score++;
+          }
+          questionIndex++;
+          if (questionIndex <= 19) {
+            ekranaSoruyuVeCevaplariniBas(questionIndex);
+          } else {
+            questionDiv.innerHTML = "";
+            resultDiv.innerHTML = `${score}`;
+          }
+        }, 2000);
+        clearInterval(interval);
+        // sayiDiv.innerHTML = "";
         console.log("xxxx");
       });
     }

@@ -65,6 +65,13 @@ export const UXUIButton = () => {
   );
 };
 
+export const ExampleButton = (props) => {
+  return (
+    <button className="p-2 font-medium text-[#979ed5] bg-[#2a2f4b] shadow-xl">
+      {props.text}
+    </button>
+  );
+};
 export const EmailButton = () => {
   return <button className="p-2 border border-white">email me</button>;
 };

@@ -4,9 +4,9 @@ const Projects = () => {
     <div>
       <h2 className="font-extrabold text-center text-3xl py-8">PROJECTS</h2>
       <div className="projects flex gap-8 px-16 py-8">
-        <Card />
-        <Card />
-        <Card />
+        <Card title="Project 1" />
+        <Card title="Project 2" />
+        <Card title="Project 3" />
       </div>
     </div>
   );
